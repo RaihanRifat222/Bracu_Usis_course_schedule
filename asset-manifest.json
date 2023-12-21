@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Bracu_Usis_course_schedule/static/css/main.52ed7ac4.css",
-    "main.js": "/Bracu_Usis_course_schedule/static/js/main.36599acb.js",
+    "main.css": "/Bracu_Usis_course_schedule/static/css/main.6ce0ec85.css",
+    "main.js": "/Bracu_Usis_course_schedule/static/js/main.be2f50e8.js",
     "static/js/787.5760314a.chunk.js": "/Bracu_Usis_course_schedule/static/js/787.5760314a.chunk.js",
     "index.html": "/Bracu_Usis_course_schedule/index.html",
-    "main.52ed7ac4.css.map": "/Bracu_Usis_course_schedule/static/css/main.52ed7ac4.css.map",
-    "main.36599acb.js.map": "/Bracu_Usis_course_schedule/static/js/main.36599acb.js.map",
+    "main.6ce0ec85.css.map": "/Bracu_Usis_course_schedule/static/css/main.6ce0ec85.css.map",
+    "main.be2f50e8.js.map": "/Bracu_Usis_course_schedule/static/js/main.be2f50e8.js.map",
     "787.5760314a.chunk.js.map": "/Bracu_Usis_course_schedule/static/js/787.5760314a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.52ed7ac4.css",
-    "static/js/main.36599acb.js"
+    "static/css/main.6ce0ec85.css",
+    "static/js/main.be2f50e8.js"
   ]
 }
