@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Bracu_Usis_course_schedule/static/css/main.f0d91f78.css",
+    "main.css": "/Bracu_Usis_course_schedule/static/css/main.6b74615d.css",
     "main.js": "/Bracu_Usis_course_schedule/static/js/main.be2f50e8.js",
     "static/js/787.5760314a.chunk.js": "/Bracu_Usis_course_schedule/static/js/787.5760314a.chunk.js",
     "index.html": "/Bracu_Usis_course_schedule/index.html",
-    "main.f0d91f78.css.map": "/Bracu_Usis_course_schedule/static/css/main.f0d91f78.css.map",
+    "main.6b74615d.css.map": "/Bracu_Usis_course_schedule/static/css/main.6b74615d.css.map",
     "main.be2f50e8.js.map": "/Bracu_Usis_course_schedule/static/js/main.be2f50e8.js.map",
     "787.5760314a.chunk.js.map": "/Bracu_Usis_course_schedule/static/js/787.5760314a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f0d91f78.css",
+    "static/css/main.6b74615d.css",
     "static/js/main.be2f50e8.js"
   ]
 }
