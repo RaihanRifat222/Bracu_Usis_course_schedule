@@ -13,7 +13,7 @@ import Header from './components/Header/Header';
 import FetchSchedule from './components/FetchSchedule/FetchSchedule';
 import ShowRoutine from './components/ShowRoutine/ShowRoutine';
 import SearchResult from './components/SearchResult/SearchResult';
-import ShowCourses from './components/ShowCourses/ShowCourses';
+
 import Courses from './components/Courses/Courses';
 
 export const AllCourseContext = createContext();
