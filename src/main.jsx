@@ -44,15 +44,15 @@ const router = createBrowserRouter([
 
 ]);
 
-// Create a new component that fetches the data and provides the context
+
 function App() {
   const [sections, setSections] = useState([]);
 
   useEffect(() => {
-    fetch('https://usis-cdn.eniamza.com/usisdump.json') // replace with your API URL
+    fetch('https://usis-cdn.eniamza.com/usisdump.json')
       .then(response => response.json())
       .then(data => setSections(data));
-  }, []); // Empty dependency array means this effect runs once on mount
+  }, []); 
 
   return (
     <AllCourseContext.Provider value={sections}>

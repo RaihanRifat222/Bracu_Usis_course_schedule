@@ -1,7 +1,7 @@
 {
   "homepage": "https://raihanrifat222.github.io/Bracu_Usis_course_schedule/",
   "name": "bracu-course-scheduler",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
