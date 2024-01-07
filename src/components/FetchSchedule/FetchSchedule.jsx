@@ -15,42 +15,7 @@ const FetchSchedule = () => {
     
 
     
-// const AddCourse = (section, setCourseList) => {
 
- 
-//     if (courseList === null) {  
-//         setCourseList( [section])
-        
-//     } else {
-      
-//         let newCourseList = [...courseList];
-//         if (newCourseList.length === 5){
-//             alert('You can add maximum 5 courses');
-//             return;
-//         }
-//         else{
-//             for (let i = 0; i < newCourseList.length; i++) {
-                
-//                 if (newCourseList[i].courseCode === section.courseCode) {
-//                     const removePreviousSection = window.confirm('This course is already added. Do you want to remove the previous section?');
-//                     if (removePreviousSection) {
-//                         newCourseList.splice(i, 1);
-                       
-//                     }
-//                     else{
-//                         return;
-//                     }
-                    
-//                 }
-//             }
-//             newCourseList.push(section);
-//         }
-//     setCourseList(newCourseList);
-//     }
-
-//     localStorage.setItem('courseList', JSON.stringify(courseList));
-    
-// };
 
     return (
             <div className="flex space-x-32">
