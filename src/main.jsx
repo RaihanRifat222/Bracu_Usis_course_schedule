@@ -1,7 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
 import {
-  createHashRouter,
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom"
@@ -19,7 +18,7 @@ import Courses from './components/Courses/Courses';
 
 export const AllCourseContext = createContext();
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     path: "/",
     element: <Header/>,
