@@ -13,14 +13,26 @@ const FetchSchedule = () => {
 
     const [courseList, setCourseList] = useState(JSON.parse(localStorage.getItem('courseList') || '[]'));
     
-
+    const [currentPage, setCurrentPage] = useState(1);
+   
+    const [sectionsPage, setSectionsPage] = useState([]);
+   
+ 
+    useEffect(() => {
+        setSectionsPage(sections.slice((currentPage-1)*10, currentPage*10));
+        console.log(sectionsPage);
+        console.log(currentPage);
+        console.log(sections.length);
+    },[currentPage, sections])
     
-
+    
+   
 
     return (
-            <div className="flex space-x-32">
+            <div className="">
 
-                <table id='section-table'>
+           <div className='flex space-x-32'>
+           <table id='section-table'>
             <thead>
             <tr>
                 <th>Add</th>
@@ -40,7 +52,7 @@ const FetchSchedule = () => {
             <tbody>
             {
                 
-                sections.map(section => 
+                sectionsPage.map(section => 
                     <tr key={section.academicSectionId} className='section'>
                         <td><button onClick={()=> AddCourse(section,courseList, setCourseList)} className='add-section button-23'>Add</button></td>
                         <td>{section.courseCode}</td>
@@ -59,8 +71,17 @@ const FetchSchedule = () => {
             }
             </tbody>
             
+            
         </table>
+        
         <ShowCourses courseList={courseList} setCourseList={setCourseList} ></ShowCourses>
+          
+           </div>
+
+        <div className="change">
+            <button className='button-23' onClick={() => setCurrentPage(currentPage-1)}>Previous</button>
+            <button className='button-23' onClick={() => setCurrentPage(currentPage+1)}>Next</button>
+            </div>
             </div>
         
     );

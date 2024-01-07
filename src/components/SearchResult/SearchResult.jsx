@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import './SearchResult.css';
 import { AllCourseContext } from '../../main';
 import AddCourse from '../ModifyCourse/AddCourse';
@@ -10,15 +10,29 @@ const SearchResult = () => {
     const searchText = location.state.searchText;
     const [courseList, setCourseList] = useState(JSON.parse(localStorage.getItem('courseList') || '[]'));
     const sections = useContext(AllCourseContext);
-   
+
+    
+    
     let filteredList= Search(searchText,sections);
-  
+    const [currentPage, setCurrentPage] = useState(1);
+   
+    const [sectionsPage, setSectionsPage] = useState([]);
+   
+ 
+    useEffect(() => {
+        setSectionsPage(filteredList.slice((currentPage-1)*10, currentPage*10));
+        console.log(sectionsPage);
+        console.log(currentPage);
+        console.log(sections.length);
+    },[currentPage, sections])
+
         return (
         <>
+<div className="">
 
-        <h1 className='font-semibold text-4xl mx-28'>Showing Search Results for {searchText}</h1>
-        <table id='search-table'>
-        <thead>
+           <div className='flex space-x-32'>
+           <table id='search-table'>
+            <thead>
             <tr>
                 <th>Add</th>
                 <th>Course Code</th>
@@ -27,20 +41,19 @@ const SearchResult = () => {
                 <th>Faculty Name</th>
                 <th>Initital</th>
                 <th>Available Seat</th>
-                <th>Seat Booked</th>
+                <th>totalFillupSeat</th>
                 <th>classSchedule</th>
                 <th>classLabSchedule</th>
-                
-                <th>courseCredit</th>
+
                 
             </tr>
             </thead>
             <tbody>
             {
                 
-                filteredList.map(section => 
-                    <tr key={section.id} className='section'>
-                        <td><button onClick={() => AddCourse(section,courseList, setCourseList)} className='add-section button-23'>Add</button></td>
+                sectionsPage.map(section => 
+                    <tr key={section.academicSectionId} className='section'>
+                        <td><button onClick={()=> AddCourse(section,courseList, setCourseList)} className='add-section button-23'>Add</button></td>
                         <td>{section.courseCode}</td>
                         <td>{section.courseTitle}</td>
                         <td>{section.courseDetails}</td>
@@ -51,13 +64,25 @@ const SearchResult = () => {
                         <td>{section.classSchedule}</td>
                         <td>{section.classLabSchedule}</td>
                     
-                        <td>{section.courseCredit}</td>
+                        
                     </tr>
                     )
             }
             </tbody>
             
+            
         </table>
+        
+      
+          
+           </div>
+
+        <div className="change">
+            <button className='button-23' onClick={() => setCurrentPage(currentPage-1)}>Previous</button>
+            <button className='button-23' onClick={() => setCurrentPage(currentPage+1)}>Next</button>
+            </div>
+            </div>
+        
         </>
     );
 };

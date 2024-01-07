@@ -26,6 +26,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <FetchSchedule/>,
+        
       },
       {
         path: "/routine",
